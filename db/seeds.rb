@@ -1,1 +1,7 @@
-User.create(email: "user@example.com", password: "password")
+user = User.create(email: "user@example.com", password: "password")
+melange = Melange.create(name: "Wigilianż UEmana")
+type_alc = Type.create(name: "Alkohol")
+type_meat = Type.create(name: "Mięso")
+party_guest = PartyGuest.create(name: "Radek", role: :organizer, user: user, melange: melange)
+ConsumePreference.create(party_guest: party_guest, type: type_alc)
+ConsumePreference.create(party_guest: party_guest, type: type_meat)

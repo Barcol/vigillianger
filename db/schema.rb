@@ -12,6 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2020_03_14_170247) do
 
+  create_table "consume_preferences", force: :cascade do |t|
+    t.integer "party_guest_id"
+    t.integer "type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["party_guest_id"], name: "index_consume_preferences_on_party_guest_id"
+    t.index ["type_id"], name: "index_consume_preferences_on_type_id"
+  end
+
   create_table "melanges", force: :cascade do |t|
     t.string "name"
     t.date "event_date"
@@ -23,16 +32,11 @@ ActiveRecord::Schema.define(version: 2020_03_14_170247) do
     t.string "name"
     t.integer "role"
     t.integer "user_id"
+    t.integer "melange_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["melange_id"], name: "index_party_guests_on_melange_id"
     t.index ["user_id"], name: "index_party_guests_on_user_id"
-  end
-
-  create_table "party_guests_and_types", id: false, force: :cascade do |t|
-    t.integer "party_guests_id"
-    t.integer "types_id"
-    t.index ["party_guests_id"], name: "index_party_guests_and_types_on_party_guests_id"
-    t.index ["types_id"], name: "index_party_guests_and_types_on_types_id"
   end
 
   create_table "products", force: :cascade do |t|

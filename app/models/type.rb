@@ -1,4 +1,5 @@
 class Type < ApplicationRecord
   has_one :product
-  has_and_belongs_to_many :party_guests
+  has_many :consume_preferences
+  has_many :party_guests, through: :consume_preferences
 end

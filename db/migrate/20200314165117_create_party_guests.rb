@@ -4,6 +4,7 @@ class CreatePartyGuests < ActiveRecord::Migration[5.2]
       t.string :name
       t.integer :role
       t.references :user, foreign_key: true
+      t.references :melange, foreign_key: true
 
       t.timestamps
     end

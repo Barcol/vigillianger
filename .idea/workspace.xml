@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdac5312-51e6-483c-9d6a-35e69a66b31b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/models/consume_preference.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20200314165850_create_consume_preferences.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vigillianger.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vigillianger.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/dashboard/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboard/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/apple-touch-icon-precomposed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/application_system_test_case.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/files/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/helpers/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/integration/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mailers/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/system/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/party_guest.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/party_guest.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/type.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20200314165117_create_party_guests.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200314165117_create_party_guests.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20200314165850_create_party_guests_and_types.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +32,31 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Development" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Development" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Development" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+    </expand>
     <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Ruby File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -182,7 +201,8 @@
       <option name="presentableId" value="Default" />
       <updated>1584203899299</updated>
       <workItem from="1584203900766" duration="2607000" />
-      <workItem from="1584206513546" duration="280000" />
+      <workItem from="1584206513546" duration="1977000" />
+      <workItem from="1584208814704" duration="2994000" />
     </task>
     <task id="LOCAL-00001" summary="altered models so that entire party can be stored">
       <created>1584206431532</created>
@@ -191,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584206431533</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="removed ide thrash">
+      <created>1584206814810</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584206814810</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,17 +226,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="altered models so that entire party can be stored" />
-    <option name="LAST_COMMIT_MESSAGE" value="altered models so that entire party can be stored" />
+    <MESSAGE value="removed ide thrash" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed ide thrash" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="556" y="244" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584204373625">
+    <state x="556" y="244" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584207911569">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
-    <state x="556" y="244" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584204373625" />
-    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2" timestamp="1584206429994">
+    <state x="556" y="244" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584207911569" />
+    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2" timestamp="1584206814672">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
-    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584206429994" />
+    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584206814672" />
     <state x="188" y="102" key="DiffContextDialog" timestamp="1584206322213">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
@@ -218,6 +246,10 @@
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="744" y="340" key="FileChooserDialogImpl/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584204370185" />
+    <state width="235" height="500" key="HiddenNamespacesPopup" timestamp="1584207915567">
+      <screen x="0" y="0" width="1920" height="1164" />
+    </state>
+    <state width="235" height="500" key="HiddenNamespacesPopup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584207915567" />
     <state x="729" y="297" key="RollbackChangesDialog" timestamp="1584206437344">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
@@ -226,9 +258,13 @@
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="457" y="217" key="SettingsEditor/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584206448247" />
-    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1584206500068">
+    <state x="556" y="318" key="Vcs.Push.Dialog.v2" timestamp="1584206820550">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
-    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584206500068" />
+    <state x="556" y="318" key="Vcs.Push.Dialog.v2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584206820550" />
+    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1584210437308">
+      <screen x="0" y="0" width="1920" height="1164" />
+    </state>
+    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584210437308" />
   </component>
 </project>
