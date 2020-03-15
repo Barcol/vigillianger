@@ -1,2 +1,9 @@
 @import "bootstrap";
 @import "font-awesome";
+
+.side-menu {
+  position: absolute;
+  background: #1a262b;
+  min-height: 100vh;
+  min-width: 250px;
+}

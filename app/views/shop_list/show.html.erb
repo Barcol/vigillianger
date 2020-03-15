@@ -1,4 +1,4 @@
-<table class="table table-stripped">
+<table class="table table-striped">
   <thead class>
   <tr>
     <th scope="col">#</th>
@@ -10,36 +10,39 @@
   </thead>
   <tbody>
   <% @product_type.party_guests.each_with_index do |guest, index| %>
-    <th scope="row">
-      <%= index + 1 %>
-    </th>
-    <td>
-      <% guest.products.each do |product| %>
-        <% if product.type.id == @product_type.id %>
-          <%= product.name %><br/>
-        <% end %>
+    <tr>
+      <th scope="row">
+        <%= index + 1 %>
+      </th>
+      <td>
+        <% guest.products.each do |product| %>
+          <% if product.type.id == @product_type.id %>
+            <%= product.name %><br/>
+          <% end %>
 
-      <% end %>
-    </td>
-    <td>
-      <%= guest.name %>
-    </td>
-    <td>
-      <% guest.products.each do |product| %>
-        <% if product.type.id == @product_type.id %>
-          <%= product.price %><br/>
         <% end %>
-      <% end %>
-    </td>
-    <td>
-      <% sum = 0 %>
-      <% guest.products.each do |product| %>
-        <% if product.type.id == @product_type.id %>
-          <% sum += product.price %>
+      </td>
+      <td>
+        <%= guest.name %>
+      </td>
+      <td>
+        <% guest.products.each do |product| %>
+          <% if product.type.id == @product_type.id %>
+            <%= number_to_currency(product.price) %><br/>
+          <% end %>
         <% end %>
-      <% end %>
-      <%= sum %>
-    </td>
+      </td>
+      <td>
+        <% sum = 0 %>
+        <% guest.products.each do |product| %>
+          <% if product.type.id == @product_type.id %>
+            <% sum += product.price %>
+          <% end %>
+        <% end %>
+        <%= number_to_currency(sum) %>
+      </td>
+    </tr>
   <% end %>
   </tbody>
 </table>
+

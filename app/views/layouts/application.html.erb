@@ -13,7 +13,7 @@
 <body>
 <%= render "layouts/notice_bar.html.erb" %>
 <% if user_signed_in? %>
-  <div>
+  <div class="side-menu">
     <%= render "layouts/side_menu.html.erb", resource: get_menu_data %>
   </div>
 <% end %>

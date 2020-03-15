@@ -1,6 +1,10 @@
 <!--It is not a menu and it is definitely not a side menu... YET!-->
-<div>
+<%= link_to image_tag("logos/logo.png"), root_path %>
+<div class="container-fluid">
   <% resource.each do |res| %>
-    <%= link_to res[:name], shop_list_path(res[:id]) %>
+    <div class="row mx-auto">
+      <%= link_to res[:name], shop_list_path(res[:id]), class: "btn btn-primary" %>
+    </div>
   <% end %>
+<%= link_to "Wyloguj", destroy_user_session_path, class: "btn btn-danger btn-logout", method: :delete %>
 </div>
