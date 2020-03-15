@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'sprockets-rails'
 gem 'bootstrap'
 
+gem 'font-awesome-rails'
 gem 'i18n'
 gem 'rails-i18n'
 

@@ -2,19 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdac5312-51e6-483c-9d6a-35e69a66b31b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/models/consume_preference.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20200314165850_create_consume_preferences.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/party_guest_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/_side_menu.html.erb.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/organizer/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/party_guest/edit.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vigillianger.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vigillianger.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/party_guest.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/party_guest.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/type.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20200314165117_create_party_guests.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200314165117_create_party_guests.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20200314165850_create_party_guests_and_types.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +53,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Ruby File" />
+        <option value="ERB File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -70,6 +70,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/dashboard" />
@@ -203,6 +204,8 @@
       <workItem from="1584203900766" duration="2607000" />
       <workItem from="1584206513546" duration="1977000" />
       <workItem from="1584208814704" duration="2994000" />
+      <workItem from="1584218842462" duration="2386000" />
+      <workItem from="1584266653558" duration="2911000" />
     </task>
     <task id="LOCAL-00001" summary="altered models so that entire party can be stored">
       <created>1584206431532</created>
@@ -218,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584206814810</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="prepared many_to_many relationship">
+      <created>1584218918774</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584218918774</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,17 +237,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="altered models so that entire party can be stored" />
     <MESSAGE value="removed ide thrash" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed ide thrash" />
+    <MESSAGE value="prepared many_to_many relationship" />
+    <option name="LAST_COMMIT_MESSAGE" value="prepared many_to_many relationship" />
   </component>
   <component name="WindowStateProjectService">
     <state x="556" y="244" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584207911569">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="556" y="244" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584207911569" />
-    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2" timestamp="1584206814672">
+    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2" timestamp="1584218917879">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
-    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584206814672" />
+    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584218917879" />
     <state x="188" y="102" key="DiffContextDialog" timestamp="1584206322213">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
@@ -258,13 +269,17 @@
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="457" y="217" key="SettingsEditor/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584206448247" />
-    <state x="556" y="318" key="Vcs.Push.Dialog.v2" timestamp="1584206820550">
+    <state x="556" y="318" key="Vcs.Push.Dialog.v2" timestamp="1584218957869">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
-    <state x="556" y="318" key="Vcs.Push.Dialog.v2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584206820550" />
-    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1584210437308">
+    <state x="556" y="318" key="Vcs.Push.Dialog.v2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584218957869" />
+    <state x="620" y="268" key="run.anything.popup" timestamp="1584218999193">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
-    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584210437308" />
+    <state x="620" y="268" key="run.anything.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584218999193" />
+    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1584270892075">
+      <screen x="0" y="0" width="1920" height="1164" />
+    </state>
+    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584270892075" />
   </component>
 </project>
