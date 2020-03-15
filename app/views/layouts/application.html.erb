@@ -4,6 +4,7 @@
   <title>Vigillianger</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
+  <%= favicon_link_tag asset_path('logos/favicon.ico') %>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -11,9 +12,11 @@
 
 <body>
 <%= render "layouts/notice_bar.html.erb" %>
-<div>
-  <%= render "layouts/side_menu.html.erb" %>
-</div>
+<% if user_signed_in? %>
+  <div>
+    <%= render "layouts/side_menu.html.erb", resource: get_menu_data %>
+  </div>
+<% end %>
 <div class="container text-center">
   <%= yield %>
 </div>

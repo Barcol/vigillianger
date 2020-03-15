@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdac5312-51e6-483c-9d6a-35e69a66b31b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/party_guest_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/_side_menu.html.erb.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/organizer/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/party_guest/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/_side_menu.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vigillianger.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vigillianger.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/type.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_side_menu.html.erb.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shop_list/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20200314165357_create_products.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200314165357_create_products.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +46,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Development" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="types: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -53,8 +60,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Ruby File" />
-        <option value="ERB File" />
         <option value="HTML File" />
+        <option value="ERB File" />
       </list>
     </option>
   </component>
@@ -73,11 +80,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/dashboard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/shop_list" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/views/dashboard" />
       <recent name="$PROJECT_DIR$/vendor" />
       <recent name="$PROJECT_DIR$/app/assets/javascripts" />
@@ -205,7 +217,7 @@
       <workItem from="1584206513546" duration="1977000" />
       <workItem from="1584208814704" duration="2994000" />
       <workItem from="1584218842462" duration="2386000" />
-      <workItem from="1584266653558" duration="2911000" />
+      <workItem from="1584266653558" duration="9837000" />
     </task>
     <task id="LOCAL-00001" summary="altered models so that entire party can be stored">
       <created>1584206431532</created>
@@ -228,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584218918774</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="made program a little bit nicer">
+      <created>1584272024607</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584272024607</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,17 +257,18 @@
     <MESSAGE value="altered models so that entire party can be stored" />
     <MESSAGE value="removed ide thrash" />
     <MESSAGE value="prepared many_to_many relationship" />
-    <option name="LAST_COMMIT_MESSAGE" value="prepared many_to_many relationship" />
+    <MESSAGE value="made program a little bit nicer" />
+    <option name="LAST_COMMIT_MESSAGE" value="made program a little bit nicer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="556" y="244" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584207911569">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="556" y="244" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584207911569" />
-    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2" timestamp="1584218917879">
+    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2" timestamp="1584272024287">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
-    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584218917879" />
+    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584272024287" />
     <state x="188" y="102" key="DiffContextDialog" timestamp="1584206322213">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
@@ -269,17 +289,21 @@
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="457" y="217" key="SettingsEditor/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584206448247" />
-    <state x="556" y="318" key="Vcs.Push.Dialog.v2" timestamp="1584218957869">
+    <state x="556" y="318" key="Vcs.Push.Dialog.v2" timestamp="1584272027542">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
-    <state x="556" y="318" key="Vcs.Push.Dialog.v2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584218957869" />
+    <state x="556" y="318" key="Vcs.Push.Dialog.v2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584272027542" />
+    <state x="637" y="309" width="645" height="546" key="find.popup" timestamp="1584280062270">
+      <screen x="0" y="0" width="1920" height="1164" />
+    </state>
+    <state x="637" y="309" width="645" height="546" key="find.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584280062270" />
     <state x="620" y="268" key="run.anything.popup" timestamp="1584218999193">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="620" y="268" key="run.anything.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584218999193" />
-    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1584270892075">
+    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1584280099295">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
-    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584270892075" />
+    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584280099295" />
   </component>
 </project>

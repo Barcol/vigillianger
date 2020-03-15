@@ -1,0 +1,45 @@
+<table class="table table-stripped">
+  <thead class>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Nazwa</th>
+    <th scope="col">Osoba</th>
+    <th scope="col">Kwota</th>
+    <th scope="col">Suma</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @product_type.party_guests.each_with_index do |guest, index| %>
+    <th scope="row">
+      <%= index + 1 %>
+    </th>
+    <td>
+      <% guest.products.each do |product| %>
+        <% if product.type.id == @product_type.id %>
+          <%= product.name %><br/>
+        <% end %>
+
+      <% end %>
+    </td>
+    <td>
+      <%= guest.name %>
+    </td>
+    <td>
+      <% guest.products.each do |product| %>
+        <% if product.type.id == @product_type.id %>
+          <%= product.price %><br/>
+        <% end %>
+      <% end %>
+    </td>
+    <td>
+      <% sum = 0 %>
+      <% guest.products.each do |product| %>
+        <% if product.type.id == @product_type.id %>
+          <% sum += product.price %>
+        <% end %>
+      <% end %>
+      <%= sum %>
+    </td>
+  <% end %>
+  </tbody>
+</table>

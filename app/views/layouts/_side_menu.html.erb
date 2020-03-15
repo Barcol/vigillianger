@@ -1,0 +1,6 @@
+<!--It is not a menu and it is definitely not a side menu... YET!-->
+<div>
+  <% resource.each do |res| %>
+    <%= link_to res[:name], shop_list_path(res[:id]) %>
+  <% end %>
+</div>
