@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :organizer
   resources :party_guest
   resources :shop_list, only: [:show]
+  resources :product, only: [:new, :create]
 end
