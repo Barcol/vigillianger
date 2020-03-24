@@ -30,6 +30,7 @@ gem 'jquery-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'sprockets-rails'
 gem 'bootstrap'
+gem 'bootstrap_form'
 
 gem 'font-awesome-rails'
 gem 'i18n'

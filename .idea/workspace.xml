@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdac5312-51e6-483c-9d6a-35e69a66b31b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/locales/pl.yml" afterDir="false" />
+    <list default="true" id="cdac5312-51e6-483c-9d6a-35e69a66b31b" name="Default Changelist" comment="table showing products for given type on main user page">
+      <change afterPath="$PROJECT_DIR$/app/views/products/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vigillianger.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vigillianger.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/dashboard_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/organizer_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/dashboard/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboard/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/product_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/shop_list_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/shop_list_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/_side_menu.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_side_menu.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/product/_new.html.erb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/shop_list/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shop_list/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,6 +212,9 @@
       <workItem from="1584208814704" duration="2994000" />
       <workItem from="1584218842462" duration="2386000" />
       <workItem from="1584266653558" duration="14584000" />
+      <workItem from="1584350140441" duration="25000" />
+      <workItem from="1584356262206" duration="379000" />
+      <workItem from="1585079324619" duration="3052000" />
     </task>
     <task id="LOCAL-00001" summary="altered models so that entire party can be stored">
       <created>1584206431532</created>
@@ -266,10 +270,10 @@
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="556" y="244" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584207911569" />
-    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2" timestamp="1584281378178">
+    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2" timestamp="1584302704538">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
-    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584281378178" />
+    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584302704538" />
     <state x="188" y="102" key="DiffContextDialog" timestamp="1584206322213">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
@@ -302,9 +306,9 @@
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="620" y="268" key="run.anything.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584218999193" />
-    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1584293766135">
+    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1585079658673">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
-    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584293766135" />
+    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1585079658673" />
   </component>
 </project>

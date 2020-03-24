@@ -1,8 +1,10 @@
 @import "bootstrap";
 @import "font-awesome";
+@import "rails_bootstrap_forms";
 
 .side-menu {
   position: absolute;
+  top: 0;
   background: #1a262b;
   min-height: 100vh;
   min-width: 250px;

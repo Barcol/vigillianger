@@ -1,0 +1,8 @@
+<div class="col-lg-6 mx-auto mt-4">
+  <%= bootstrap_form_with(model: @product, url: products_path, local: true) do |f| %>
+    <%= f.text_field :name %>
+    <%= f.text_field :price, append: "groszy" %>
+    <%= f.collection_select :type_id, current_user.party_guest.types, :id, :name %>
+    <%= f.submit %>
+  <% end %>
+</div>
