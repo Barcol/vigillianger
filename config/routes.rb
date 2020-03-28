@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   resources :organizer
   resources :party_guest
   resources :shop_list, only: [:show]
-  resources :products
+  resources :products do
+    get '/assign_product', to: 'products#assign', as: 'assign'
+  end
 end

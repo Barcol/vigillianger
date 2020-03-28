@@ -1,3 +1,4 @@
+<h5>Lista zakupów</h5>
 <table class="table table-striped">
   <thead class>
     <tr>
@@ -19,7 +20,6 @@
             <% if product.type.id == @product_type.id %>
               <%= product.name %><br/>
             <% end %>
-
           <% end %>
         </td>
         <td>
@@ -28,7 +28,7 @@
         <td>
           <% guest.products.each do |product| %>
             <% if product.type.id == @product_type.id %>
-              <%= number_to_currency(product.price) %><br/>
+              <%= number_to_currency product.price / 100.0 %><br/>
             <% end %>
           <% end %>
         </td>
@@ -39,9 +39,40 @@
               <% sum += product.price %>
             <% end %>
           <% end %>
-          <%= number_to_currency(sum) %>
+          <%= number_to_currency sum / 100.0 %>
         </td>
       </tr>
+    <% end %>
+  </tbody>
+</table>
+<h5>Produkty do wzięcia</h5>
+<table class="table table-striped">
+  <thead class>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nazwa</th>
+      <th scope="col">Kwota</th>
+      <th scope="col">Akcja</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @product_type.products.each_with_index do |product, index| %>
+      <% unless product.party_guest %>
+        <tr>
+          <th scope="row">
+            <%= index + 1 %>
+          </th>
+          <td>
+            <%= product.name %>
+          </td>
+          <td>
+            <%= number_to_currency product.price / 100.0 %>
+          </td>
+          <td>
+            <%= link_to "Zaklep", product_assign_path(product), class: "btn btn-primary" %>
+          </td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
