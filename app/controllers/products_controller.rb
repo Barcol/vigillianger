@@ -5,11 +5,11 @@ class ProductsController < ApplicationController
 
   def create
     if params[:self_assign]
-      product_params.merge(party_guest: current_user.party_guest)
+      @product = Product.create(product_params.merge(party_guest: current_user.party_guest))
     else
       @product = Product.create(product_params)
     end
-    redirect_to shop_list_path(@product.type)
+    redirect_to shop_list_path(@product.type), notice: "Mordo, wyszło git"
   end
 
   def assign
@@ -21,6 +21,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :price, :type_id)
+    params.require(:product).permit(:name, :price, :type_id, :self_assign)
   end
 end

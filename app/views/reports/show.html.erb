@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="card mt-4 pt-3">
+    <h3 class="card-title">Podsumowanie kosztów imprezy</h3>
+    <div class="card-body">
+      <p>
+        <% mean_price = calculate_mean_price(@people.map { |person| person.products.map { |product| product.price } }.flatten, @people.count) %>
+        Średni wydatek na osobę: <%= number_to_currency mean_price / 100 %>
+      </p>
+
+      <% @people.each do |person| %>
+        <%= person.name %>
+        <% persons_spendings = person.products.map { |product| product.price }.sum %>
+        <% price_delta = mean_price - persons_spendings %>
+        <% if price_delta > 0 %>
+          musi dopłacić: <%= number_to_currency price_delta / 100 %>
+        <% elsif price_delta < 0 %>
+          nadpłacił: <%= number_to_currency -price_delta / 100 %>
+        <% else %>
+          jakimś cudem jest na 0 :o
+        <% end %>
+        <br>
+      <% end %>
+    </div>
+  </div>
+</div>
