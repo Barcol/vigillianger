@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_one :party_guest
 
+  enum role: {guest: 0, organizer: 1, admin: 2}
 end

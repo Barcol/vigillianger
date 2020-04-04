@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_14_170247) do
+ActiveRecord::Schema.define(version: 2020_04_03_204727) do
 
   create_table "consume_preferences", force: :cascade do |t|
     t.integer "party_guest_id"
@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2020_03_14_170247) do
 
   create_table "party_guests", force: :cascade do |t|
     t.string "name"
-    t.integer "role"
     t.integer "user_id"
     t.integer "melange_id"
     t.datetime "created_at", null: false
@@ -64,6 +63,7 @@ ActiveRecord::Schema.define(version: 2020_03_14_170247) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "role", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

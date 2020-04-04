@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :party_guest
   resources :shop_list, only: [:show]
   resource :report, only: [:show]
+  resource :melange_management
   resources :products do
     get '/assign_product', to: 'products#assign', as: 'assign'
   end

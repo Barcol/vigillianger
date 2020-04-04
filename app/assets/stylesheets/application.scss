@@ -1,5 +1,4 @@
 @import "bootstrap";
-@import "font-awesome";
 @import "rails_bootstrap_forms";
 
 .side-menu {
@@ -10,14 +9,34 @@
   min-width: 250px;
   text-align: center;
 }
+
 .menu-row {
   text-align: center;
 }
+
 .menu-element {
   margin-left: auto;
   margin-right: auto;
-  width: 90px
+  width: 100%;
 }
+
+.menu-button {
+  background-color: blue;
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  height: 40px;
+  padding: 3% 0;
+}
+
+.menu-button:hover {
+  color: white;
+  background-color: darkblue;
+  text-decoration: none;
+}
+
 .main-button {
   margin-left: auto;
   margin-right: auto;

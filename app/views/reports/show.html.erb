@@ -2,11 +2,20 @@
   <div class="card mt-4 pt-3">
     <h3 class="card-title">Podsumowanie kosztów imprezy</h3>
     <div class="card-body">
+      <% price_list = @people.map { |person| person.products.map { |product| product.price } }.flatten %>
       <p>
-        <% mean_price = calculate_mean_price(@people.map { |person| person.products.map { |product| product.price } }.flatten, @people.count) %>
+        Łącznie impreza kosztowała: <%= number_to_currency price_list.sum / 100 %>
+      </p>
+      <p>
+        <% mean_price = calculate_mean_price(price_list, @people.count) %>
         Średni wydatek na osobę: <%= number_to_currency mean_price / 100 %>
       </p>
+      <p>
+        Średnio każdy "towar"
+        kosztował: <%= number_to_currency calculate_mean_price(price_list, price_list.length) / 100 %>
+      </p>
 
+      <h5>Kwoty do wyrównania:</h5>
       <% @people.each do |person| %>
         <%= person.name %>
         <% persons_spendings = person.products.map { |product| product.price }.sum %>

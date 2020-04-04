@@ -5,12 +5,17 @@
 <div class="container-fluid mt-4">
   <% resource.each do |res| %>
     <div class="row menu-row">
-      <%= link_to res[:name], shop_list_path(res[:id]), class: "btn btn-primary menu-element" %>
+      <%= link_to res[:name], shop_list_path(res[:id]), class: "menu-button menu-element" %>
     </div>
   <% end %>
   <div class="row menu-row">
-    <%= link_to "Raport", report_path, class: "btn btn-success btn-logout menu-element" %>
+    <%= link_to "Raport", report_path, class: "btn btn-success btn menu-element" %>
   </div>
+  <% if can? :access, :melange_management %>
+    <div class="row menu-row">
+      <%= link_to "Zarządzaj", melange_management_path, class: "btn btn-warning menu-element" %>
+    </div>
+  <% end %>
   <div class="row menu-row">
     <%= link_to "Wyloguj", destroy_user_session_path, class: "btn btn-danger btn-logout, menu-element", method: :delete %>
   </div>
