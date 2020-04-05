@@ -8,15 +8,15 @@
       <%= link_to res[:name], shop_list_path(res[:id]), class: "menu-button menu-element" %>
     </div>
   <% end %>
-  <div class="row menu-row">
+  <div class="row menu-row mt-1">
     <%= link_to "Raport", report_path, class: "btn btn-success btn menu-element" %>
   </div>
   <% if can? :access, :melange_management %>
-    <div class="row menu-row">
-      <%= link_to "Zarządzaj", melange_management_path, class: "btn btn-warning menu-element" %>
+    <div class="row menu-row mt-1">
+      <%= link_to "Zarządzaj", edit_melange_management_path, class: "btn btn-warning menu-element" %>
     </div>
   <% end %>
-  <div class="row menu-row">
+  <div class="row menu-row mt-1">
     <%= link_to "Wyloguj", destroy_user_session_path, class: "btn btn-danger btn-logout, menu-element", method: :delete %>
   </div>
 </div>
