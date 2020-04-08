@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_03_204727) do
+ActiveRecord::Schema.define(version: 2020_04_08_173155) do
 
   create_table "consume_preferences", force: :cascade do |t|
     t.integer "party_guest_id"
@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(version: 2020_04_03_204727) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "melange_id"
+    t.index ["melange_id"], name: "index_types_on_melange_id"
   end
 
   create_table "users", force: :cascade do |t|
