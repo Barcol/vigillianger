@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root "dashboard#index"
-  resources :party_guest
+  resources :party_guests
+  resources :types
   resources :shop_list, only: [:show]
   resource :report, only: [:show]
   resource :melange_management

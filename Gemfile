@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'pry', '~> 0.12.2'
 
+gem 'cocoon'
+
 gem 'cancancan'
 
 # Reduces boot times through caching; required in config/boot.rb

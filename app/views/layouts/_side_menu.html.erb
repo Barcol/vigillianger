@@ -3,6 +3,14 @@
   <%= link_to image_tag("logos/logo.png"), root_path %>
 </div>
 <div class="container-fluid mt-4">
+  <div class="text-white">
+    <% if current_user.party_guest&.melange %>
+      <p>Zalogowany jako:
+      <%= current_user.party_guest.name %></p>
+      <p>Wydarzenie:
+        <%= current_user.party_guest.melange.name %></p>
+    <% end %>
+  </div>
   <% resource.each do |res| %>
     <div class="row menu-row">
       <%= link_to res[:name], shop_list_path(res[:id]), class: "menu-button menu-element" %>
