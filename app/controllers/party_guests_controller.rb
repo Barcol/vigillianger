@@ -10,16 +10,16 @@ class PartyGuestsController < ApplicationController
 
   def create
     @party_guest = PartyGuest.new(party_guest_params)
-    if @party_guest.save
-      user = User.create!(email: params[:party_guest][:email], password: "password")
+    user = User.new(email: params[:party_guest][:email], password: "password")
+    if user.save && @party_guest.save
       @party_guest.update_attributes(user: user)
       @party_guest.update_attributes(melange: current_user.party_guest.melange)
       current_user.party_guest.melange.types.each do |type|
         ConsumePreference.create(party_guest: @party_guest, type: type)
+        redirect_to edit_melange_management_path, notice: "Poprawnie dodano użytkownika" and return
       end
-      redirect_to edit_melange_management_path, notice: "Poprawnie dodano użytkownika"
     else
-      render :new
+      render "new"
     end
   end
 
@@ -47,10 +47,11 @@ class PartyGuestsController < ApplicationController
     end
     type_ids.each do |type_id|
       ConsumePreference.find_or_create_by(party_guest: @party_guest, type_id: type_id)
-    end
+    end if type_ids
   end
 
   def party_guest_params
     params.require(:party_guest).permit(:name, :types, :email)
   end
+
 end

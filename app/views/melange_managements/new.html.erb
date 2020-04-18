@@ -7,12 +7,12 @@
 
         <% unless current_user.party_guest&.name %>
           <p class="mt-4"><strong>Zacznijmy od podstaw! Jak się nazywasz?</strong></p>
-          <%= text_field_tag :username %>
+          <%= text_field_tag :username, nil, required: true %>
         <% end %>
 
         <p class="mt-4"><strong>1.Wprowadź dane wydarzenia</strong></p>
-        <%= form.text_field :name %>
-        <%= form.date_field :event_date %>
+        <%= form.text_field :name, required: true %>
+        <%= form.date_field :event_date, required: true %>
 
         <p class="mt-4"><strong>2.Dodaj uczestników</strong></p>
         <p><small>Domyślnym hasłem logowani uczestnika jest 'password'. Tak, wiem xD</small></p>

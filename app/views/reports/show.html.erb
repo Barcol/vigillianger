@@ -7,9 +7,13 @@
       <p>
         Łącznie impreza kosztowała: <%= number_to_currency price_list.sum / 100 %>
       </p>
+      <% current_user.party_guest.melange.types.each do |type| %>
+        <p>Łączne koszta za <%= type.name %>,
+          to: <%= number_to_currency type.products.map { |product| product.price }.sum / 100 %></p>
+      <% end %>
       <p>
-        <% mean_price = calculate_mean_price(price_list, @people.count) %>
-        Średni wydatek na osobę: <%= number_to_currency mean_price / 100 %>
+        <% main_mean_price = calculate_mean_price(price_list, @people.count) %>
+        Średni wydatek na osobę: <%= number_to_currency main_mean_price / 100 %>
       </p>
       <p>
         Średnio każdy "towar"
@@ -17,18 +21,24 @@
       </p>
 
       <h5>Kwoty do wyrównania:</h5>
-      <% @people.each do |person| %>
-        <%= person.name %>
-        <% persons_spendings = person.products.map { |product| product.price }.sum %>
-        <% price_delta = mean_price - persons_spendings %>
-        <% if price_delta > 0 %>
-          musi dopłacić: <%= number_to_currency price_delta / 100 %>
-        <% elsif price_delta < 0 %>
-          nadpłacił: <%= number_to_currency -price_delta / 100 %>
-        <% else %>
-          jakimś cudem jest na 0 :o
+      <% current_user.party_guest.melange.types.each do |type| %>
+        <h6 class="mt-4"><strong>Rozliczenie za <%= type.name %></strong></h6>
+        <% type_people = ConsumePreference.where(type: type).map { |con_pref| con_pref.party_guest } %>
+        <% type_people.each do |person| %>
+          <%= person.name %>
+          <% persons_spendings = person.products.where(type: type).map { |product| product.price }.sum %>
+          <% type_price_list = type_people.map { |prsn| prsn.products.map { |product| product.price } }.flatten %>
+          <% mean_price = calculate_mean_price(type_price_list, @people.count) %>
+          <% price_delta = mean_price - persons_spendings %>
+          <% if price_delta > 0 %>
+            musi dopłacić: <%= number_to_currency price_delta / 100 %>
+          <% elsif price_delta < 0 %>
+            nadpłacił: <%= number_to_currency -price_delta / 100 %>
+          <% else %>
+            jakimś cudem jest na 0 :o
+          <% end %>
+          <br>
         <% end %>
-        <br>
       <% end %>
     </div>
   </div>

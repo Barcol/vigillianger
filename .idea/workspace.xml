@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="cdac5312-51e6-483c-9d6a-35e69a66b31b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/party_guests_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/party_guests_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/party_guest.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/party_guest.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/melange_managements/_party_guest_fields.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/melange_managements/_party_guest_fields.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/melange_managements/_type_fields.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/melange_managements/_type_fields.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/melange_managements/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/melange_managements/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/melange_managements/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/melange_managements/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/party_guests/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/party_guests/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/reports/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reports/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/pl.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/pl.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +227,8 @@
       <workItem from="1586885000063" duration="599000" />
       <workItem from="1586941595932" duration="112000" />
       <workItem from="1587066750780" duration="1394000" />
-      <workItem from="1587133063640" duration="17093000" />
+      <workItem from="1587133063640" duration="18598000" />
+      <workItem from="1587207835261" duration="3886000" />
     </task>
     <task id="LOCAL-00001" summary="altered models so that entire party can be stored">
       <created>1584206431532</created>
@@ -303,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587154628708</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="some jetbrains stuff">
+      <created>1587155061117</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1587155061117</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +353,8 @@
     <MESSAGE value="basic melange editing implemented" />
     <MESSAGE value="user editing from admin view" />
     <MESSAGE value="overall code modernization and refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="overall code modernization and refactor" />
+    <MESSAGE value="some jetbrains stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="some jetbrains stuff" />
   </component>
   <component name="WindowStateProjectService">
     <state x="80" y="279" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586014587774">
@@ -350,11 +369,11 @@
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="694" y="331" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1586018920796" />
-    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2" timestamp="1587155046895">
+    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2" timestamp="1587155060979">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1585429900007" />
-    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1587155046895" />
+    <state x="0" y="0" width="1920" height="1164" key="CommitChangelistDialog2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1587155060979" />
     <state x="188" y="102" key="DiffContextDialog" timestamp="1586022163698">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
@@ -375,24 +394,24 @@
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="457" y="217" key="SettingsEditor/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584206448247" />
-    <state x="556" y="318" key="Vcs.Push.Dialog.v2" timestamp="1587154632092">
+    <state x="556" y="318" key="Vcs.Push.Dialog.v2" timestamp="1587155063947">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="556" y="285" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1585429905432" />
-    <state x="556" y="318" key="Vcs.Push.Dialog.v2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1587154632092" />
-    <state x="636" y="105" width="645" height="750" key="find.popup" timestamp="1587145991389">
+    <state x="556" y="318" key="Vcs.Push.Dialog.v2/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1587155063947" />
+    <state x="636" y="105" width="645" height="750" key="find.popup" timestamp="1587209155186">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
-    <state x="636" y="105" width="645" height="750" key="find.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1587145991389" />
+    <state x="636" y="105" width="645" height="750" key="find.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1587209155186" />
     <state x="620" y="268" key="run.anything.popup" timestamp="1584218999193">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="620" y="268" key="run.anything.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1584218999193" />
-    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1587154428603">
+    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1587211730066">
       <screen x="0" y="0" width="1920" height="1164" />
     </state>
     <state x="623" y="231" width="672" height="609" key="search.everywhere.popup/0.0.1920.1044@0.0.1920.1044" timestamp="1585426734112" />
-    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1587154428603" />
+    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/0.0.1920.1164/1919.0.1920.1080@0.0.1920.1164" timestamp="1587211730066" />
     <state x="2542" y="239" width="672" height="630" key="search.everywhere.popup/0.0.1920.1164/1919.0.1920.1080@1919.0.1920.1080" timestamp="1585945883676" />
   </component>
 </project>

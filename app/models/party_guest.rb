@@ -5,6 +5,8 @@ class PartyGuest < ApplicationRecord
   has_many :consume_preferences
   has_many :types, through: :consume_preferences
 
+  validates :name, presence: true
+
   attr_accessor :email
   attr_accessor :role
 

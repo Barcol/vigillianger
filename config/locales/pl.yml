@@ -1,2 +1,29 @@
 pl:
   currency: zł
+
+  helpers:
+    submit:
+      type:
+        create: Utwórz nową grupę produktów
+        update: Aktualizuj grupę produktów
+      party_guest:
+        create: Dodaj uczestnika wydarzenia
+        update: Aktualizuj uczestnika wydarzenia
+      melange:
+        update: Aktualizuj wydarzenie
+
+  activerecord:
+    attributes:
+      type:
+        name: Nazwa grupy produktów
+      party_guest:
+        role: Współorganizator
+        name: Imię/pseudonim gościa
+        email: Adres email
+      melange:
+        event_date: Data wydarzenia
+        name: Nazwa
+    models:
+      type: Grupa produktów
+      party_guest: Gość
+      melange: Melanż

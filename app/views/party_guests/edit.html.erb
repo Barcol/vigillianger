@@ -14,8 +14,10 @@
           <div class="col-lg-4 text-center">
             <%= form.text_field :name %>
             <% @types.each do |type| %>
-              <%= check_box_tag 'type_ids[]', type.id, @party_guest.types.any? { |pg_type| pg_type.name == type.name } %>
-              <%= h type.name %>
+              <p>
+                <%= check_box_tag 'type_ids[]', type.id, @party_guest.types.any? { |pg_type| pg_type.name == type.name } %>
+                <%= h type.name %>
+              </p>
             <% end %><br><br>
             <%= form.submit %>
           </div>
