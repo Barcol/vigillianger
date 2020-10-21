@@ -20,30 +20,20 @@
                 <%= index + 1 %>
               </th>
               <td>
-                <% guest.products.each do |product| %>
-                  <% if product.type.id == @product_type.id %>
-                    <%= product.name %><br/>
-                  <% end %>
+                <% guest.products.where(type_id: @product_type.id).each do |product| %>
+                  <%= product.name %><br/>
                 <% end %>
               </td>
               <td>
                 <%= guest.name %>
               </td>
               <td>
-                <% guest.products.each do |product| %>
-                  <% if product.type.id == @product_type.id %>
-                    <%= number_to_currency product.price / 100.0 %><br/>
-                  <% end %>
+                <% guest.products.where(type_id: @product_type.id).each do |product| %>
+                  <%= number_to_currency product.price / 100.0 %><br/>
                 <% end %>
               </td>
               <td>
-                <% sum = 0 %>
-                <% guest.products.each do |product| %>
-                  <% if product.type.id == @product_type.id %>
-                    <% sum += product.price %>
-                  <% end %>
-                <% end %>
-                <%= number_to_currency sum / 100.0 %>
+                <%= number_to_currency guest.product_cost_sum_for_type(@product_type.id) %>
               </td>
             </tr>
           <% end %>
