@@ -1,5 +1,7 @@
 {
   "name": "Vigillianger",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "select2": "^4.0.13"
+  }
 }

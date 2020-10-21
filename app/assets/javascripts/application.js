@@ -17,4 +17,9 @@
 //= require bootstrap
 //= require bootstrap-sprockets
 //= require cocoon
+//= require select2
 //= require_tree .
+
+$(document).ready(function () {
+    $(".select2").select2();
+})
