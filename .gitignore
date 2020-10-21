@@ -67,4 +67,4 @@ yarn-debug.log*
 !/storage/.keep
 
 # Jetbrains stuff
-/.idea/
+.idea/
