@@ -5,7 +5,7 @@ class PartyGuestsController < ApplicationController
   end
 
   def new
-    @party_guest = PartyGuest.new
+    @party_guest = PartyGuestForm.new
   end
 
   def create

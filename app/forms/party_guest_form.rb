@@ -1,6 +1,7 @@
 class PartyGuestForm < Rectify::Form
-  attribute :first_name, String
-  attribute :last_name,  String
+  attribute :name, String
+  attribute :email,  String
+  attribute :product_types, Array
 
-  validates :first_name, :last_name, :presence => true
+  validates :name, :email, :presence => true
 end
