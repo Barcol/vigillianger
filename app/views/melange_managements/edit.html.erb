@@ -3,7 +3,7 @@
   <div class="card mt-4 pt-3">
     <h3 class="card-title">Dane imprezy</h3>
     <div class="card-body">
-      <%= bootstrap_form_with(model: @melange, url: melange_management_path) do |form| %>
+      <%= simple_form_for @melange, url: melange_management_path do |form| %>
         <div class="col-sm-6 mx-auto">
           <%= form.text_field :name %>
           <%= form.date_field :event_date %>

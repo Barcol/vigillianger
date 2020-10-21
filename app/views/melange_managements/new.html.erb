@@ -3,7 +3,7 @@
   <div class="card mt-4 pt-3">
     <h3 class="card-title">Dane imprezy</h3>
     <div class="card-body">
-      <%= bootstrap_form_with(model: @melange, url: melange_management_path) do |form| %>
+      <%= simple_form_for(model: @melange, url: melange_management_path) do |form| %>
 
         <% unless current_user.party_guest&.name %>
           <p class="mt-4"><strong>Zacznijmy od podstaw! Jak się nazywasz?</strong></p>

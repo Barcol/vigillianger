@@ -7,7 +7,7 @@
   <div class="card mt-4 pt-3">
     <h3 class="card-title">Dane uczestnika</h3>
     <div class="card-body">
-      <%= bootstrap_form_with(model: @party_guest, local: true) do |form| %>
+      <%= simple_form_for(model: @party_guest, local: true) do |form| %>
         <div class="row">
           <div class="col-lg-4">
           </div>

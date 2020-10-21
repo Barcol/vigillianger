@@ -1,4 +1,5 @@
 <h2 class="mt-3"><%= @product_type.name %></h2>
+
 <div class="container">
   <div class="card mt-3 pt-4">
     <h3 class="card-title">Lista zakupów</h3>
@@ -14,23 +15,19 @@
           </tr>
         </thead>
         <tbody>
-          <% @product_type.party_guests.each_with_index do |guest, index| %>
+          <% @party_guests.each_with_index do |guest, index| %>
             <tr>
               <th scope="row">
                 <%= index + 1 %>
               </th>
               <td>
-                <% guest.products.where(type_id: @product_type.id).each do |product| %>
-                  <%= product.name %><br/>
-                <% end %>
+                <%= guest.products_names(@product_type.id) %>
               </td>
               <td>
                 <%= guest.name %>
               </td>
               <td>
-                <% guest.products.where(type_id: @product_type.id).each do |product| %>
-                  <%= number_to_currency product.price / 100.0 %><br/>
-                <% end %>
+                <%= guest.products_prices(@product_type.id) %>
               </td>
               <td>
                 <%= number_to_currency guest.product_cost_sum_for_type(@product_type.id) %>
@@ -55,7 +52,7 @@
           </tr>
         </thead>
         <tbody>
-          <% @product_type.products.each_with_index do |product, index| %>
+          <% @products.each_with_index do |product, index| %>
             <% unless product.party_guest %>
               <tr>
                 <th scope="row">

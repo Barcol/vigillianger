@@ -1,10 +1,6 @@
 module ApplicationHelper
   def get_menu_data
-    if current_user.party_guest&.types
-      current_user.party_guest.types.map { |type| {id: type.id, name: type.name} }
-    else
-      []
-    end
+    Type.accessible_by(current_ability).map { |type| {id: type.id, name: type.name} }
   end
 
   def calculate_mean_price (set, number_of_people)

@@ -1,18 +1,14 @@
 <div class="container">
   <div class="card mt-5">
     <div class="card-body">
-      <div class="col-lg-6 mx-auto mt-4">
-        <%= bootstrap_form_with(model: @product, url: products_path, local: true) do |f| %>
+      <div class="block-content pb-4">
+
+        <%= simple_form_for @product do |f| %>
           <%= f.text_field :name, label: "Nazwa" %>
-          <div class="row">
-            <div class="col-lg-6">
-              <%= f.text_field :price, append: "groszy", label: "Cena" %>
-            </div>
-            <div class="col-lg-6">
-              <%= f.collection_select :type_id, current_user.party_guest.types, :id,
-                                      :name, label: "Typ produktu" %>
-            </div>
-          </div>
+          <%= f.text_field :price, append: "groszy", label: "Cena" %>
+          <%= f.collection_select :type_id, current_user.party_guest.types, :id,
+                                  :name, label: "Typ produktu" %>
+
           <div class="row mx-auto">
             <%= check_box_tag :self_assign %>
             <%= label_tag :self_assign, "Przypisz ten produkt do mnie" %>
